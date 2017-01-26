@@ -1,0 +1,222 @@
+<html xmlns='http://www.w3.org/1999/xhtml'><head>
+
+<title> <? include ('../../administrator122/name.txt'); ?> </title><meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
+<link rel='shortcut icon' href='../images/favicon.gif' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+<style>
+#divoculta {
+display: none;
+}
+#d_clip_container {
+top: 125px;
+left: 700px;
+	margin: 0px;
+    padding: 0;  
+}
+</style>
+<!-- prta papeles -->
+	<script type='text/javascript' src='../../core/clip/ZeroClipboard.js'></script>
+	<script language='JavaScript'>
+		var clip = null;
+		
+		function $(id) { return document.getElementById(id); }
+		
+		function init() {
+			clip = new ZeroClipboard.Client();
+			clip.setHandCursor( true );
+			
+			clip.addEventListener('load', function (client) {
+				debugstr('Flash movie loaded and ready.');
+			});
+			
+			clip.addEventListener('mouseOver', function (client) {
+				// update the text on mouse over
+				clip.setText( $('fe_text').value );
+			});
+			
+			clip.addEventListener('complete', function (client, text) {
+				debugstr('Copied text to clipboard: ' + text );
+			});
+			
+			clip.glue( 'd_clip_button', 'd_clip_container' );
+		}
+		
+		function debugstr(msg) {
+			var p = document.createElement('p');
+			p.innerHTML = msg;
+			$('d_debug').appendChild(p);
+		}
+	</script>
+
+<script language='javascript'>
+<!--
+
+function reset() {
+document.emailafriend.name.value='';
+document.emailafriend.email.value='';
+document.emailafriend.fmail1.value='';
+document.emailafriend.fmail2.value='';
+document.emailafriend.fmail3.value='';
+document.emailafriend.fmail4.value='';
+document.emailafriend.fmail5.value='';
+}
+
+function validate() {
+
+
+if (document.emailafriend.fmail1.value.length==0) {
+alert('Te falta en correo de tu amigo!');
+return false;
+}
+
+if (document.emailafriend.email.value.length==0) {
+alert('Falta tu correo');
+return false;
+}
+if (document.emailafriend.name.value.length==0) {
+alert('Falta tu nombre...');
+return false;
+}
+
+document.emailafriend.submit()
+return true;
+}
+
+//-->
+</script>
+
+<script type='text/javascript' src='https://apis.google.com/js/plusone.js'>
+  {lang: 'es'}
+</script>
+
+<? include('../../administrator122/adfly.php'); ?>
+
+</head>
+
+<body onLoad='init()'>
+<!--Header Begin-->
+<div id='header'>
+  <div class='center'>
+    <div id='logo'><a href='#'>Calliope</a></div>
+    <!--Menu Begin-->
+    <div id='menu'>
+      <ul>
+        <li><a href='../../index.php'><span>Home</span></a></li>
+        <li><a class='active' href='../../../about.php'><span>Acerca</span></a></li>
+        <li><a href='#'><span>Abuso</span></a></li>
+        <li><a href='#'><span>Contacta</span></a></li>
+      </ul>
+    </div>
+    <!--Menu END-->
+  </div>
+</div>
+<!--Header END-->
+<!--SubPage Toprow Begin-->
+<div id='toprowsub'>
+  <div class='center'>
+    <h2>File: <? include ('../../administrator122/servidor.txt'); echo '/p/' . '$senha';  ?></h2> 
+	
+	<div id='divoculta'><textarea id='fe_text' cols=50 rows=5 onChange='clip.setText(this.value)'><? include ('../../administrator122/servidor.txt'); echo '/p/' . '$senha';  ?></textarea></div>
+								
+				<div id='d_clip_container' style='position:absolute'>
+					<div id='d_clip_button' class='my_clip_button'>Copiar Url</div>
+				</div>
+	
+	<table cellpadding='0' cellspacing='0' width='331' height='43'>
+	<!-- MSTableType='layout' -->
+	<tr>
+		<td></td>
+		<td valign='top' rowspan='2' width='85'>
+		&nbsp;<g:plusone></g:plusone></td>
+		<td valign='top' rowspan='2' width='111'>
+		&nbsp;<a href='https://twitter.com/share' class='twitter-share-button' data-count='horizontal'>Tweet</a><script type='text/javascript' src='//platform.twitter.com/widgets.js'></script></td>
+		<td height='21'></td>
+	</tr>
+	<tr>
+		<td width='17'>&nbsp;</td>
+		<td valign='top' height='22' width='118'>
+		&nbsp;<script type='text/javascript' src='http://widgets.tuenti.com/widgets.js'></script>
+
+<a href='http://www.tuenti.com/share' class='tuenti-share-button'></a></td>
+		</tr>
+</table>
+
+	
+  </div>
+</div>
+<!--Toprow END-->
+<!--SubPage MiddleRow Begin-->
+<div id='midrow'>
+  <div class='center'>
+    <div class='textbox2'><br /><br /><br /><div style='text-align: center;'><a href='go.php'><img style='border: 0px solid ; width: 184px; height: 60px;' src='../img/button-5620.png' alt='' /></a></div><br />&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Descargas: <? include ('numero.dat'); ?><br /><br /><br /></div>
+<br><br>
+<td valign='middle' align='center'><form target='ass' name='emailafriend' action='http://www.pickyourown.org/emailafriend.php' method='post' onsubmit='return checkfields()'>
+	<font size='4'>Enviar a un amigo:&nbsp;
+</font>
+<div align='center'>
+<center>
+<table border='0' cellpadding='10' cellspacing='0' width='473'>
+<tbody><tr>
+<td width='158'> Tu nombre:</td>
+<td width='275'>
+<input size='30' name='name' maxlength='45'>
+</td>
+</tr>
+<tr>
+<td width='158'>Tu correo:</td>
+<td width='275'>
+<input size='30' name='email' maxlength='45'>
+</td>
+</tr>
+<tr>
+<td width='158'>Correo de tu amigo:</td>
+<td width='275'>
+<input size='30' name='fmail1' maxlength='50'>
+</td>
+</tr>
+<tr>
+<td colspan='2'>
+<p align='center'>
+
+Inserta un numero al azar:
+<input type='text' name='names' size='5' style='background-color: #FFFFCC'></p>
+<p align='center'>
+
+<input onclick='validate();' type='button' value='Enviar!'>
+<input type='hidden' name='refurl' value='<? include ('../../administrator122/servidor.txt'); echo '/p/' . '$senha';  ?>'> 
+
+</p></td>
+</tr>
+</tbody></table>
+</center>
+</div>
+</form>
+</td>
+</tr>
+<center><iframe name='ass' width='393' height='75' scrolling='no' border='0' frameborder='0'>
+</iframe>
+</center>
+
+  </div>
+</div>
+<!--MiddleRow END-->
+<!--SubPage BottomRow Begin-->
+<div id='bottomrow'>
+  <div id='box2holder'><div class='box2' style='width: 925px; height: 83px'>
+	<p align='center'><? include ('../../administrator122/ads.txt'); ?><br /></p>
+	<p><a>. </a></p>
+    </div>
+  </div>
+</div>
+<!--BottomRow END-->
+<!--Footer Begin-->
+
+<!--Footer END-->
+</body></html>

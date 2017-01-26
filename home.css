@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+
+
+table{
+	border-collapse: separate;
+	border-spacing: 0pt;
+}
+strong{
+	font-weight: 700;
+}
+caption, th, td{
+	font-weight:normal;
+	text-align:left;
+}
+blockquote:before, blockquote:after, q:before, q:after{
+	content:"";
+}
+blockquote, q{
+	quotes:"" "";
+}
+pre{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+	cursor: pointer;
+	color: #296ba5;
+	text-decoration: none;
+	outline: none !Important;
+}
+
+.clear{
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	display: block;
+	line-height: 0;
+}
+.clearfix{
+	overflow: hidden;
+}
+.fleft{
+	float: left;
+}
+.fright{
+	float: right;
+}
+.italic{
+	font-style: italic;
+}
+/******* FIN GENERAL RESET *******/
+
+
+
+
+input.text{
+	width: 500px;
+	background: #171717 url(img/search.png) no-repeat scroll right 2px;
+	padding: 13px;
+	color: #8c8c8c;
+	border: 1px solid #393939;
+	margin-bottom: 30px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	font-size: 16px;
+}
+input.text.active{
+	background: #343434 url(img/search.png) no-repeat scroll right -43px;
+	border-color: #000;
+	color: #fff;
+}
+.button_centrar
+{
+	width:300px;
+	margin:0 auto;
+}
+input[type="submit"] {
+background:#343434;
+border:1px solid #000;
+color:#FFFFFF;
+cursor:pointer;
+font-size:11px;
+font-weight:700;
+height:40px;
+line-height:28px;
+outline-style:none;
+padding:0 20px;
+text-transform:uppercase;
+width:200px;
+}

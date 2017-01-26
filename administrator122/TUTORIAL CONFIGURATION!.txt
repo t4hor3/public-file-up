@@ -1,0 +1,7 @@
+IN ads.txt : put the code of the banner
+
+IN name.txt : put the name of the webpage
+
+IN noticia.txt : put a notice
+
+IN servidor.txt : put the server url
